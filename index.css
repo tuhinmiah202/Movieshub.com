@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+  --background: 225 15% 14%;
+  --foreground: 210 40% 98%;
+  
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  
+  --popover: 225 21% 16%;
+  --popover-foreground: 210 40% 98%;
+  
+  --card: 226 23% 18%;
+  --card-foreground: 210 40% 98%;
+  
+  --border: 214.3 31.8% 30%;
+  --input: 214.3 31.8% 30%;
+  
+  --primary: 347 89% 58%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 225 57% 17%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 347 89% 58%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --ring: 225 57% 17%;
+  
+  --radius: 0.5rem;
+
+  --chart-1: 347 89% 58%;
+  --chart-2: 226 23% 18%;
+  --chart-3: 225 57% 17%;
+  --chart-4: 223 47% 11%;
+  --chart-5: 219 37% 13%;
+
+  --neutral: 223 47% 21%;
+}
+
+.dark {
+  --background: 225 15% 14%;
+  --foreground: 210 40% 98%;
+  
+  --muted: 223 47% 11%;
+  --muted-foreground: 215 20.2% 65.1%;
+  
+  --popover: 225 21% 16%;
+  --popover-foreground: 210 40% 98%;
+  
+  --card: 226 23% 18%;
+  --card-foreground: 210 40% 98%;
+  
+  --border: 214.3 31.8% 30%;
+  --input: 214.3 31.8% 30%;
+  
+  --primary: 347 89% 58%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 225 57% 17%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 347 89% 58%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --ring: 217.2 32.6% 17.5%;
+  
+  --neutral: 223 47% 21%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.movie-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-btn.active {
+  @apply bg-accent text-white;
+}
